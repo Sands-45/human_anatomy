@@ -44,6 +44,6 @@
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_19_198" transform="matrix(0.00150616 0 0 0.000643501 -0.0136005 0)"/>
 </pattern>
-<image id="image0_19_198" data-name="anatomy_skeleton_back.png" width="682" height="1554" xlink:href="/anatomy_back.png"/>
+<image id="image0_19_198" data-name="anatomy_skeleton_back.png" width="682" height="1554" xlink:href="./images/anatomy_back.png"/>
 </defs>
 </svg>
