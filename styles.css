@@ -1,71 +1,84 @@
 body {
-    background-color: #000;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #000;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
-@media screen and (min-width: 768px){
-    main {
-        position: relative; /* Container needs a position value other than static */
-        width: 100%; /* Optional: Adjust the container's width as needed */
-        height: 100vh; /* Optional: Adjust the container's height as needed */
-        display:flex;
-        justify-content:space-between;
-    }
-    
-    .fly {
-        z-index: 10;
-        min-width: 300px;
-        position: absolute;
-        top: 50%; /* Move the element down by 50% of the container's height */
-        left: 50%; /* Move the element right by 50% of the container's width */
-        transform: translate(-50%, -50%); /* Center the element perfectly */
-    } 
+@media screen and (min-width: 768px) {
+  main {
+    position: relative; /* Container needs a position value other than static */
+    width: 100%; /* Optional: Adjust the container's width as needed */
+    height: 100vh; /* Optional: Adjust the container's height as needed */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fly {
+    z-index: 10;
+    min-width: 300px;
+    position: absolute;
+    top: 50%; /* Move the element down by 50% of the container's height */
+    left: 50%; /* Move the element right by 50% of the container's width */
+    transform: translate(-50%, -50%); /* Center the element perfectly */
+  }
 }
 
 .glass-background {
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
-    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-    border-radius: 10px; /* Optional: Add rounded corners to the div */
-    padding: 20px; /* Optional: Add padding to the content inside the div */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow */
-  }
-
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  border-radius: 10px; /* Optional: Add rounded corners to the div */
+  padding: 20px; /* Optional: Add padding to the content inside the div */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow */
+}
 
 #body-section {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr; /* Create two equal-width columns */
-    justify-content: space-between; /* Center horizontally */
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr; /* Create two equal-width columns */
+  justify-content: space-between; /* Center horizontally */
 }
 
 .fig-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .fig-front {
-    margin-right: auto;
-    margin-left: 8px;
+  margin-right: auto;
+  margin-left: 8px;
 }
 
 .fig-back {
-    margin-left: auto;
-    margin-right: 8px; 
+  margin-left: auto;
+  margin-right: 8px;
 }
 
 .svg {
-    height: 75vmin;
+  height: 75vmin;
 }
 
 #body-part-print {
-    color: red;
-    text-transform:capitalize;
+  color: red;
+  text-transform: capitalize;
 }
 //width 682
 //height 1554
+
+.can_interact:hover {
+  fill: red;
+  cursor: pointer;
+  fill-opacity: 0.9;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

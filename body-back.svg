@@ -1,10 +1,13 @@
 <svg width="1083" height="2402" viewBox="0 0 1083 2402" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style>
     .can_interact:hover {
-      fill: red; 
-      cursor: pointer;
-      fill-opacity:0.9;
-    }
+  fill: red;
+  cursor: pointer;
+  fill-opacity: 0.9;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
   </style>
 <g id="anatomy_back">
 <rect id="body_back" x="35" y="15" width="1013" height="2371" fill="url(#pattern0)"/>
