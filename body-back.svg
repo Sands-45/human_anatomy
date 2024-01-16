@@ -1,7 +1,7 @@
 <svg width="1083" height="2402" viewBox="0 0 1083 2402" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style>
     .can_interact:hover {
-      fill: #0ea5e9; 
+      fill: red; 
       cursor: pointer;
       fill-opacity:0.9;
     }
