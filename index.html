@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy Map</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <div class="fig-wrapper">
+            <figure class="fig fig-front">
+                <!-- SVG comes here -->
+                <object id="svg-front" class="svg" data="./body_front.svg" type="image/svg+xml"></object>
+                <!-- SVG back END -->
+                <figcaption class="text-center"></figcaption>
+            </figure>
+        </div>
+
+        <!-- On Hover or Click, print muscle group name -->
+        <section class="fly text-center glass-background">
+            <h1>Hover on the muscle group and see...</h1>
+            <h2>
+                <span>Body Part: </span><span id="body-part-print"></span>
+            </h2>
+        </section>
+        <div class="fig-wrapper">
+            <figure class="fig fig-back">
+                <!-- SVG comes here -->
+                <object id="svg-back" class="svg" data="./body-back.svg" type="image/svg+xml"></object>
+                <!-- SVG back END -->
+                <figcaption class="text-center"></figcaption>
+            </figure>
+        </div>
+    </main>
+
+</body>
+
+</html>
