@@ -73,4 +73,4 @@
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_10_2" transform="matrix(0.00146871 0 0 0.000643501 -0.000830222 0)"/>
 </pattern>
-<image id="image0_10_2" data-name="anatomy_skeleton.png" width="682" height="1554" xlink:href="/images/anatomy_front.png"/></defs> </svg>
+<image id="image0_10_2" data-name="anatomy_skeleton.png" width="682" height="1554" xlink:href="./images/anatomy_front.png"/></defs> </svg>
