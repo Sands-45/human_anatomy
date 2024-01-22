@@ -25,7 +25,7 @@ const run = (prefix) => {
       svgDocument.getElementById(svgElement.id).style.fill = 'red';
       svgDocument.getElementById(svgElement.id).style.fillOpacity = '0.9';
       const printElement = document.getElementById("body-part-print");
-      const printElementSelected = document.getElementById("body-part-print_selected");
+      //const printElementSelected = document.getElementById("body-part-print_selected");
       printElement.innerHTML = svgElement.id?.replace(/_/gmi," ");
       printElementSelected.innerHTML = selectedIds?.toString()?.replace(/_/gmi," ")
     });
@@ -35,25 +35,36 @@ const run = (prefix) => {
       svgDocument.getElementById(svgElement.id).style.fillOpacity = fill_op;
     });
 
-    svgElement.addEventListener("click", function (e) {
-      const id = e.target.id;
-      if (selectedIds.includes(id)) {
-        selectedIds = selectedIds.filter(item => item !== id);
-      } else {
-        selectedIds.push(id);
-      }
-      localStorage.setItem('selectedIds', JSON.stringify(selectedIds));
+    // svgElement.addEventListener("click", function (e) {
+    //   const id = e.target.id;
+    //   if (selectedIds.includes(id)) {
+    //     selectedIds = selectedIds.filter(item => item !== id);
+    //   } else {
+    //     selectedIds.push(id);
+    //   }
+    //   localStorage.setItem('selectedIds', JSON.stringify(selectedIds));
 
-      // Update highlighting
-      updateHighlighting();
-    });
+    //   // Update highlighting
+    //   updateHighlighting();
+    // });
   }
 
   // Initial highlighting based on local storage
   updateHighlighting();
 };
 
-document.addEventListener("mouseover",()=>{
-   run("svg-front")
-   run("svg-back")
-})
+const initializeSvgInteractivity = (svgId) => {
+  const svgObject = document.getElementById(svgId);
+  
+  if (svgObject) {
+    svgObject.addEventListener('load', () => {
+      run(svgId);
+    });
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  initializeSvgInteractivity("svg-front");
+  initializeSvgInteractivity("svg-back");
+});
+

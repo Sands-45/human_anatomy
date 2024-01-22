@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anatomy Map</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./scripts.js"></script>
-</head>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-<body>
+  <body>
+    <main class="p-6 pt-20 flex flex-col items-center">
+      <div class="w-full max-w-[40rem] h-fit flex overflow-hidden">
+        <figure class="fig fig-front w-1/2 h-fit">
+          <!-- SVG comes here -->
+          <object
+            id="svg-front"
+            class="svg w-full h-[30rem]"
+            data="./body_front.svg"
+            type="image/svg+xml"
+          ></object>
+          <!-- SVG back END -->
+          <figcaption class="text-center"></figcaption>
+        </figure>
 
-    <main>
-        <div class="fig-wrapper">
-            <figure class="fig fig-front">
-                <!-- SVG comes here -->
-                <object id="svg-front" class="svg" data="./body_front.svg" type="image/svg+xml"></object>
-                <!-- SVG back END -->
-                <figcaption class="text-center"></figcaption>
-            </figure>
-        </div>
+        <figure class="fig fig-back w-1/2 h-fit overflow-hidden">
+          <!-- SVG comes here -->
+          <object
+            id="svg-back"
+            class="svg w-full h-[30rem]"
+            data="./body_back.svg"
+            type="image/svg+xml"
+          ></object>
+          <!-- SVG back END -->
+          <figcaption class="text-center"></figcaption>
+        </figure>
+      </div>
 
-        <!-- On Hover or Click, print muscle group name -->
-        <section class="fly text-center glass-background">
-            <h1>Hover on the muscle group and see...</h1>
-            <h2>
-                <span>Hover Part: </span><span id="body-part-print"></span>
-            </h2>
-        </section>
-        <div class="fig-wrapper">
-            <figure class="fig fig-back">
-                <!-- SVG comes here -->
-                <object id="svg-back" class="svg" data="./body_back.svg" type="image/svg+xml"></object>
-                <!-- SVG back END -->
-                <figcaption class="text-center"></figcaption>
-            </figure>
-        </div>
+      <!-- On Hover or Click, print muscle group name -->
+      <section
+        class="fly text-center glass-background mt-8 bg-zinc-300 rounded p-6 shadow border-2 border-zinc-50"
+      >
+        <h1 class="text-xs uppercase font-bold text-zinc-900">
+          Hover on any body part or click to select
+        </h1>
+        <h2>
+          <span class="text-xs uppercase font-bold text-zinc-900"
+            >Hover Part: </span
+          ><span
+            style="
+              text-transform: uppercase;
+              font-size: 0.75rem;
+              font-weight: 600;
+              color: red;
+            "
+            id="body-part-print"
+          ></span>
+        </h2>
+
+        <!-- <hr class="my-4 w-full h-0 border-b border-white border-dashed" />
+
+        <span>Selected: </span><span id="body-part-print_selected"></span> -->
+      </section>
     </main>
-
-                <span>Selected: </span><span id="body-part-print_selected"></span>
-</body>
-
+  </body>
 </html>
